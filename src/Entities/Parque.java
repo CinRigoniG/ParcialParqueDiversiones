@@ -10,6 +10,9 @@ public class Parque {
     private String horaCierre;
     private List<Atraccion> atracciones = new ArrayList<>();
 
+    public Parque() {
+    }
+
     public Parque(String nombre, String direccion, String horarioApertura, String horaCierre) {
         this.nombre = nombre;
         this.direccion = direccion;
@@ -55,6 +58,17 @@ public class Parque {
 
     public void setAtracciones(List<Atraccion> atracciones) {
         this.atracciones = atracciones;
+    }
+
+    @Override
+    public String toString() {
+        return "Parque{" +
+                "nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", horarioApertura='" + horarioApertura + '\'' +
+                ", horaCierre='" + horaCierre + '\'' +
+                ", atracciones=" + atracciones +
+                '}';
     }
 
     public Atraccion obtenerAtraccionMasVisitada() {

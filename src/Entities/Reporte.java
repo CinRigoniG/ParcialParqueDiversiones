@@ -1,5 +1,6 @@
 package Entities;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -7,7 +8,10 @@ public class Reporte {
     private int id;
     private String detalles;
     private Date fechaEmision;
-    private List<Incidente> incidentes;
+    private List<Incidente> incidentes = new ArrayList<>();
+
+    public Reporte() {
+    }
 
     public Reporte(int id, String detalles, Date fechaEmision) {
         this.id = id;
@@ -45,5 +49,15 @@ public class Reporte {
 
     public void setIncidentes(List<Incidente> incidentes) {
         this.incidentes = incidentes;
+    }
+
+    @Override
+    public String toString() {
+        return "Reporte{" +
+                "id=" + id +
+                ", detalles='" + detalles + '\'' +
+                ", fechaEmision=" + fechaEmision +
+                ", incidentes=" + incidentes +
+                '}';
     }
 }

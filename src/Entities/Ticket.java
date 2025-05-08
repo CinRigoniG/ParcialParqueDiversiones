@@ -8,6 +8,9 @@ public abstract class Ticket {
     private double precio;
     private Date fechaEmision;
 
+    public Ticket() {
+    }
+
     public Ticket(String codigo, double precio, Date fechaEmision) {
         this.codigo = codigo;
         this.precio = precio;

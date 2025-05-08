@@ -1,12 +1,21 @@
 package Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmpleadoSeguridad {
     private int id;
     private String nombre;
-    private List<String> especialidades;
-    private List<Incidente> incidentes;
+    private List<String> especialidades = new ArrayList<>();
+    private List<Incidente> incidentes = new ArrayList<>();
+
+    public EmpleadoSeguridad() {
+    }
+
+    public EmpleadoSeguridad(int id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
 
     public EmpleadoSeguridad(int id, String nombre, List<String> especialidades) {
         this.id = id;
@@ -44,6 +53,16 @@ public class EmpleadoSeguridad {
 
     public void setIncidentes(List<Incidente> incidentes) {
         this.incidentes = incidentes;
+    }
+
+    @Override
+    public String toString() {
+        return "EmpleadoSeguridad{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", especialidades=" + especialidades +
+                ", incidentes=" + incidentes +
+                '}';
     }
 
     public void agregarEspecialidad(String especialidad) {

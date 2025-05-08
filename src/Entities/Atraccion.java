@@ -2,6 +2,7 @@ package Entities;
 
 import Enums.TipoAtraccion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Atraccion {
@@ -10,11 +11,15 @@ public class Atraccion {
     private int tiempoDuracion;
     private TipoAtraccion tipoAtraccion;
     private int visitantesEnCola;
-    private List<Horario> horariosDisponibles;
-    private List<AtraccionTecnico> tecnicosAtraccion;
-    private List<Mantenimiento> mantenimientos;
+    private List<Horario> horariosDisponibles = new ArrayList<>();
+    private List<AtraccionTecnico> tecnicosAtraccion = new ArrayList<>();
+    private List<Mantenimiento> mantenimientos = new ArrayList<>();
 
-    public Atraccion(int capacidad, int tiempoDuracion, TipoAtraccion tipoAtraccion, int visitantesEnCola) {
+    public Atraccion() {
+    }
+
+    public Atraccion(String nombre, int capacidad, int tiempoDuracion, TipoAtraccion tipoAtraccion, int visitantesEnCola) {
+        this.nombre = nombre;
         this.capacidad = capacidad;
         this.tiempoDuracion = tiempoDuracion;
         this.tipoAtraccion = tipoAtraccion;
@@ -83,6 +88,20 @@ public class Atraccion {
 
     public void setMantenimientos(List<Mantenimiento> mantenimientos) {
         this.mantenimientos = mantenimientos;
+    }
+
+    @Override
+    public String toString() {
+        return "Atraccion{" +
+                "nombre='" + nombre + '\'' +
+                ", capacidad=" + capacidad +
+                ", tiempoDuracion=" + tiempoDuracion +
+                ", tipoAtraccion=" + tipoAtraccion +
+                ", visitantesEnCola=" + visitantesEnCola +
+                ", horariosDisponibles=" + horariosDisponibles +
+                ", tecnicosAtraccion=" + tecnicosAtraccion +
+                ", mantenimientos=" + mantenimientos +
+                '}';
     }
 
     public int calcularTiempoDeEspera() {

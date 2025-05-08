@@ -5,6 +5,9 @@ public class Horario {
     private String horaInicio;
     private String horaFin;
 
+    public Horario() {
+    }
+
     public Horario(String dia, String horaInicio, String horaFin) {
         this.dia = dia;
         this.horaInicio = horaInicio;
@@ -33,5 +36,14 @@ public class Horario {
 
     public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
+    }
+
+    @Override
+    public String toString() {
+        return "Horario{" +
+                "dia='" + dia + '\'' +
+                ", horaInicio='" + horaInicio + '\'' +
+                ", horaFin='" + horaFin + '\'' +
+                '}';
     }
 }

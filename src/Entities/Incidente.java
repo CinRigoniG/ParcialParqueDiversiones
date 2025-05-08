@@ -11,17 +11,13 @@ public class Incidente {
     private Atraccion atraccion;
     private Visitante visitante;
 
+    public Incidente() {
+    }
+
     public Incidente(Date fecha, String descripcion, EstadoIncidente estado) {
         this.fecha = fecha;
         this.descripcion = descripcion;
         this.estado = estado;
-    }
-
-    public String toString(){
-        return("Atraccion: "+atraccion
-                +"\nFecha: "+fecha
-                +"\nDescripcion: "+descripcion
-                +"\nEstado: "+estado);
     }
 
     public Date getFecha() {
@@ -63,4 +59,13 @@ public class Incidente {
     public void setVisitante(Visitante visitante) {
         this.visitante = visitante;
     }
+
+    @Override
+    public String toString(){
+        return("Atraccion: "+atraccion
+                +"\nFecha: "+fecha
+                +"\nDescripcion: "+descripcion
+                +"\nEstado: "+estado);
+    }
+
 }

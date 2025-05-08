@@ -12,6 +12,9 @@ public class Visitante {
     private List<Entrada> entradas;
     private Ticket ticket;
 
+    public Visitante() {
+    }
+
     public Visitante(String nombre, String dni, int edad) {
         this.nombre = nombre;
         this.dni = dni;
@@ -61,5 +64,16 @@ public class Visitante {
 
     public void setTicket(Ticket ticket) {
         this.ticket = ticket;
+    }
+
+    @Override
+    public String toString() {
+        return "Visitante{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                ", edad=" + edad +
+                ", entradas=" + entradas +
+                ", ticket=" + ticket +
+                '}';
     }
 }

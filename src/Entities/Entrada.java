@@ -7,6 +7,9 @@ public class Entrada {
     private Date fecha;
     private LocalTime hora;
 
+    public Entrada() {
+    }
+
     public Entrada(Date fecha, LocalTime hora) {
         this.fecha = fecha;
         this.hora = hora;
@@ -26,5 +29,13 @@ public class Entrada {
 
     public void setHora(LocalTime hora) {
         this.hora = hora;
+    }
+
+    @Override
+    public String toString() {
+        return "Entrada{" +
+                "fecha=" + fecha +
+                ", hora=" + hora +
+                '}';
     }
 }

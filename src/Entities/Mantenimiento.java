@@ -6,6 +6,9 @@ public class Mantenimiento {
     private Date fecha;
     private String observaciones;
 
+    public Mantenimiento() {
+    }
+
     public Mantenimiento(Date fecha, String observaciones) {
         this.fecha = fecha;
         this.observaciones = observaciones;
@@ -25,5 +28,13 @@ public class Mantenimiento {
 
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
+    }
+
+    @Override
+    public String toString() {
+        return "Mantenimiento{" +
+                "fecha=" + fecha +
+                ", observaciones='" + observaciones + '\'' +
+                '}';
     }
 }

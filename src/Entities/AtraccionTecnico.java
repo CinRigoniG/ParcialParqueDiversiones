@@ -4,6 +4,9 @@ public class AtraccionTecnico {
     private String nombre;
     private String especialidad;
 
+    public AtraccionTecnico() {
+    }
+
     public AtraccionTecnico(String nombre, String especialidad) {
         this.nombre = nombre;
         this.especialidad = especialidad;
@@ -23,5 +26,13 @@ public class AtraccionTecnico {
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
+    }
+
+    @Override
+    public String toString() {
+        return "AtraccionTecnico{" +
+                "nombre='" + nombre + '\'' +
+                ", especialidad='" + especialidad + '\'' +
+                '}';
     }
 }
