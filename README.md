@@ -41,5 +41,3 @@ Muestra los incidentes en los que participó el empleado, incluyendo: atracción
 ### 5. `obtenerAtraccionMasVisitada()` – Parque (20%)
 
 Devuelve la atracción con más visitantes en cola.
-
-```bash
